@@ -1,0 +1,76 @@
+@use 'variables';
+
+    .welcome_back--item{
+        
+        display: none;
+
+        &.move_welcomeBack_items--in{
+
+            animation: register_in 0.5s forwards;
+            display: block;
+            
+        }
+
+        &.move_welcomeBack_items--out{
+
+            animation: welcome_back_items--out 0.5s forwards ease-in-out;
+            display: block;
+            
+        }
+
+
+        &_title{
+            font-family: 'Pacifico', cursive;
+            font-size: 3rem;
+            font-weight: 500;
+        }
+
+        &_span{
+            margin: 10px;
+        }
+
+        &_button_login{
+
+            width: 180px;
+            font-size: 1.1rem;
+            background-color: transparent;
+            border-radius: 60px;
+            color: #ffffff;
+            padding: 10px;
+            border: solid #ffffff 5px;
+            margin: 15px;
+            transition: box-shadow 0.2s ease-in-out;
+
+            &:focus{
+                outline: 0;
+            }
+
+            &:hover{
+                box-shadow: 0 0 40px 40px #ffffff inset;
+                color: variables.$link_color;
+            }
+
+        }
+    }
+
+    @media (max-width: 500px){
+        .welcome_back--item{
+        
+            display: none;
+            margin: 20%;
+    
+    
+            &_title{
+                font-size: 3rem;
+            }
+    
+            &_span{
+                display: none;
+            }
+    
+            &_button_login{
+    
+                display: none;
+            }
+        }
+    }

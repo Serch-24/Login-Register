@@ -1,0 +1,9 @@
+
+.register--error_pass, .register--error_confirm-pass, .register--error_email,
+.login--error_email, .login--error_pass{
+    color: #ff0000;
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+}

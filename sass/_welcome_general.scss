@@ -1,0 +1,117 @@
+@use "variables";
+@use 'welcomeBack_styles';
+@use 'welcome_styles';
+
+
+.welcome{
+        
+    width: 50%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background-image: linear-gradient(to bottom, variables.$primary_color, variables.$secondary_color,
+                                        variables.$secondary_color, variables.$primary_color);
+    background-size: 100% 900%;
+    color: #ffffff;
+    text-align: center;
+    border-radius: 10px;
+    display: flex;
+    position: relative;
+    z-index: 2;
+
+    &.move_welcome_container--left{
+        animation: move_welcome_container--left 0.8s ease-in-out forwards;
+    }
+
+    &.move_welcome_container--right{
+        animation: move_welcome_container--right 0.8s ease-in-out forwards;
+    }
+
+    &.move_bg_welcome_container--register{
+        animation: move_bg_welcome_container--register 0.8s ease-in-out forwards;
+    }
+
+    &.move_bg_welcome_container--login{
+        animation: move_bg_welcome_container--login 0.8s ease-in-out forwards;
+    }
+
+    & .circle{
+        position: absolute;
+        border-radius: 50%;
+        opacity: 0;
+        background-color: #ffffff21;
+
+        &.one{
+            bottom: 5%;
+            right: 10%;
+            width: 100px;
+            height: 100px;
+            animation: bg_animation 16s infinite ease-out;
+            animation-delay: 0.5s;
+        }
+
+        &.two{
+            width: 50px;
+            height: 50px;
+            bottom: 10%;
+            left: 50%;
+            animation: bg_animation 13s infinite ease-out;
+            animation-delay: 3s;
+        }
+
+        &.three{
+            width: 150px;
+            height: 150px;
+            bottom: -10%;
+            left: -5%;
+            animation: bg_animation 22s infinite ease-out;
+            animation-delay: 5s;
+        }
+
+        &.four{
+            width: 80px;
+            height: 80px;
+            bottom: -10%;
+            right: 25%;
+            animation: bg_animation 15s infinite ease-out;
+            animation-delay: 2s;
+        }
+
+        &.five{
+            width: 180px;
+            height: 180px;
+            bottom: 20%;
+            right: -5%;
+            animation: bg_animation 25s infinite ease-out;
+            animation-delay: 4.5s;
+        }
+
+        &.six{
+            width: 30px;
+            height: 30px;
+            bottom: -10%;
+            left: 25%;
+            animation: bg_animation 10s infinite ease-out;
+            animation-delay: 6.5s;
+        }
+
+        &.seven{
+            width: 70px;
+            height: 70px;
+            bottom: -10%;
+            left: 15%;
+            animation: bg_animation 30s infinite ease-out;
+            animation-delay: 3s;
+        }
+
+    }
+}
+
+@media (max-width: 500px){
+    .welcome{
+        width: 100%;
+        margin: 0;
+        border-radius: 0px 0px 15px 15px;
+    }
+}

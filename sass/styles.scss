@@ -1,0 +1,51 @@
+@use 'reset';
+@use 'welcome_general';
+@use "forms_general";
+@use 'variables';
+@use 'animations';
+@use 'validations';
+
+.container{
+    
+    width: 95%;
+    height: 85vh;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+    margin-bottom: 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    transition: all ease-in 0.3ms;
+    z-index: 0;
+    
+}
+
+footer{
+
+    font-size: 10px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    padding: 10px;
+    
+}
+
+@media (max-width: 500px) {
+    .container{
+        width: 100%;
+        height: auto;
+        margin: 0;
+        padding: 0;
+        border-radius: 0px;
+        box-shadow: none;
+    }
+
+    footer{
+        display: none;
+    }
+}

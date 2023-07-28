@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <!--Custom css-->
+    <link rel="stylesheet" href="css/styles.css">
+    <!--Tab icon-->
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <main class="container">
+
+        <!--Bienvenida-->
+        <section class="welcome">
+            
+            <div class="circle one"></div>
+            <div class="circle two"></div>
+            <div class="circle three"></div>
+            <div class="circle four"></div>
+            <div class="circle five"></div>
+            <div class="circle six"></div>
+            <div class="circle seven"></div>
+
+            <div class="welcome--item">  
+                <h1 class="welcome--item_title">¡Bienvenido <span>de nuevo!</span></h1>
+                <p class="welcome--item_span">¿No tienes una <b>cuenta</b>?</p>
+                <button class="welcome--item_button_register">¡Regístrate!</button>
+            </div>
+
+            <div class="welcome_back--item">
+                <h1 class="welcome_back--item_title">¡Bienvenido!</h1>
+                <p class="welcome_back--item_span">¿Ya tienes una <b>cuenta</b>?</p>
+                <button class="welcome_back--item_button_login">¡Inicia sesión!</button>
+            </div>
+        </section>
+
+        <section class="login">
+
+            <!--Inicio de sesión-->
+            <div class="login--item">
+                <div>
+                    <h1 class="login--title">Iniciar sesión</h1>
+                    <nav class="login--social">
+                        <button class="login-facebook">
+                            <i class="fa-brands fa-facebook"></i>
+                        </button>
+
+                        <button class="login-google">    
+                            <i class="fa-brands fa-google"></i>
+                        </button>
+
+                        <button class="login-twitter">
+                            <i class="fa-brands fa-twitter"></i>
+                        </button>
+                    </nav>
+                </div>
+
+                <div class="login--form">
+                    <form class="loginForm" action="" method="">
+                        <div class="login--form_container">
+                            <label for="email"><i class="fa-solid fa-envelope"></i> Correo electrónico</label>
+                            <input type="email" name="email" id="email-login" placeholder="example@example.com" required>
+                            <span class="login--error_email"></span>
+                        </div>
+
+                        <div class="login--form_container">
+                            <label for="password"><i class="fa-solid fa-key"></i> Contraseña</label>
+                            <input class="password" type="password" name="password" id="password-login" required>
+                            <i class="fa-regular fa-eye show_pass"></i>
+                            <span class="login--error_pass"></span>
+                        </div>
+
+                        <div class="login--form_container  button">
+                            <button type="submit">Ingresar</button>
+                        </div>
+
+                        <div class="login--form_container_a">
+                            <a href="#">Olvidé mi contraseña</a>
+                        </div>
+                        
+                        <div class="login--form_container_register">
+                            <span>¿No tienes una cuenta?</span><a href="#">Regístrate</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!--Registro de usuarios-->
+            <div class="register">
+                <div>
+                    <h1 class="register--title">Registrarse</h1>
+                    <nav class="register--social">
+                        <button class="register-facebook">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </button>
+
+                        <button class="register-google">
+                            <i class="fa-brands fa-google"></i>
+                        </button>
+
+                        <button class="register-twitter">
+                            <i class="fa-brands fa-twitter"></i>
+                        </button>
+                    </nav>
+                </div>
+                <div class="register--form">
+                    <form class="registerForm" action="" method="">
+                        <div class="register--form_container">
+                            <label for="name"><i class="fa-solid fa-user-tag"></i> Nombre completo</label>
+                            <input type="text" name="name" id="name" required>
+                        </div>
+
+                        <div class="register--form_container">
+                            <label for="email-register"><i class="fa-solid fa-envelope"></i> Correo electrónico</label>
+                            <input type="email" name="email-register" id="email-register" required>
+                            <span class="register--error_email"></span>
+                        </div>
+
+                        <div class="register--form_container">
+                            <label for="password-register"><i class="fa-solid fa-user-lock"></i> Contraseña</label>
+                            <input class="password-register" type="password" name="password-register" id="password-register" required>
+                            <i class="fa-regular fa-eye show_pass_register"></i>
+                            <span class="register--error_pass"></span>
+                        </div>
+
+                        <div class="register--form_container">
+                            <label for="confirm_password-register"><i class="fa-solid fa-user-check"></i> Confirmar contraseña</label>
+                            <input type="password" name="confirm_password-register" id="confirm_password-register" required>
+                            <span class="register--error_confirm-pass"></span>
+                        </div>
+    
+                        <div class="register--form_container">
+                            <button id="register--btn" type="submit">Crear cuenta</button>
+                        </div>
+
+                        <div class="register--form_container_login">
+                            <span>¿Ya tienes una cuenta?</span><a href="#">Inicia sesión</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <button id="logout">
+            Cerrar sesión
+        </button>
+        By Sergio Chaparro
+    </footer>
+    
+    <!--Main Js-->
+    <script src="js/main.js" type="module"></script>
+    <!--Icons-->
+    <script src="https://kit.fontawesome.com/cddf3df688.js" crossorigin="anonymous"></script>
+    <!--SweetAlert-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+@use 'login_styles';
+@use 'register_styles';
+
+.login{
+
+    width: 50%;
+    z-index: 0;
+
+    &.move_login_container{
+        animation: move_container--left 0.8s forwards ease-in-out;
+    }
+
+    &.move_login_container--right{
+        animation: move_container--right 0.8s forwards ease-in-out;
+    }
+}
+
+.show_pass, .show_pass_register{
+    position: absolute;
+    right: 2%;
+    top: 52.5%;
+    opacity: 0.3;
+    cursor: pointer;
+    transition: ease 0.1s;
+
+    &:hover{
+        opacity: 0.8;
+    }
+}
+
+.g_id_signin{
+    border: none;
+    box-shadow: none;
+    position: absolute;
+    top: 0;
+    opacity: 0;
+
+    .g_id_signin:hover + .fa-google{
+        
+        scale: 1.3;
+    }
+    
+}
+
+@media (max-width: 500px){
+
+    .login{
+
+        width: 100%;
+        z-index: 0;
+    
+        &.move_login_container{
+            animation: move_container--left 0.8s forwards ease-in-out;
+        }
+    
+        &.move_login_container--right{
+            animation: move_container--right 0.8s forwards ease-in-out;
+        }
+    }
+
+}
+
